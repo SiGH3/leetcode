@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f260c036-04a3-4d5c-b46d-dc3e33e86566}</ProjectGuid>
-    <RootNamespace>动态规划</RootNamespace>
+    <ProjectGuid>{8221c178-9582-4f7d-955b-20d5bc341593}</ProjectGuid>
+    <RootNamespace>无重复字符的最长子串</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,13 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="单词拆分.cpp" />
-    <ClCompile Include="完全平方数.cpp" />
-    <ClCompile Include="打家劫舍.cpp" />
-    <ClCompile Include="杨辉三角.cpp" />
-    <ClCompile Include="爬楼梯.cpp" />
-    <ClCompile Include="背包1.cpp" />
-    <ClCompile Include="零钱兑换.cpp" />
+    <ClCompile Include="test.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
