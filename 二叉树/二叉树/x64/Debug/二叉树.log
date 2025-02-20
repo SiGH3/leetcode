@@ -1,0 +1,6 @@
+﻿  从前序与中序遍历序列构造二叉树.cpp
+D:\code\cpp\leetcode\二叉树\二叉树\从前序与中序遍历序列构造二叉树.cpp(88,15): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  路经总和.cpp
+  正在生成代码...
+MSVCRTD.lib(exe_main.obj) : error LNK2019: 无法解析的外部符号 main，函数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) 中引用了该符号
+D:\code\cpp\leetcode\二叉树\x64\Debug\二叉树.exe : fatal error LNK1120: 1 个无法解析的外部命令
