@@ -15,7 +15,7 @@ class Solution {
                 if(height[i]<height[stk.top()]){
                     stk.push(i);
                 }
-                if(height[i]==height[stk.top()]){
+                else if(height[i]==height[stk.top()]){
                     stk.pop();
                     stk.push(i);
                 }
