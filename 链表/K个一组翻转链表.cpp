@@ -16,7 +16,7 @@ class Solution {
             ListNode* node = head;
             for(int i=0;i<k;i++){
                 if(node==nullptr){
-                    return node;
+                    return head;
                 }
                 node=node->next;
             }
