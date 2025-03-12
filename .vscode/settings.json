@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "editor.suggest.showClasses": true,
   "editor.suggest.showColors": true,
   "editor.suggest.showConstructors": true,
@@ -32,4 +33,10 @@
     "vector": "cpp",
     "unordered_map": "cpp"
   }
+=======
+    "files.associations": {
+        "iostream": "cpp",
+        "ostream": "cpp"
+    }
+>>>>>>> 799f2c376b9c9e6393309da254bc56770ce115e3
 }
