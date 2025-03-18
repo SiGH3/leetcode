@@ -90,32 +90,18 @@ public:
     }
 };
 
-int main() {
-    vector<string> operations = {"LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"};
-    vector<vector<int>> values = {{2}, {1, 1}, {2, 2}, {1}, {3, 3}, {2}, {4, 4}, {1}, {3}, {4}};
-
-    LRUCache* cache = nullptr;
-    vector<string> results;
-
-    for (int i = 0; i < operations.size(); ++i) {
-        if (operations[i] == "LRUCache") {
-            cache = new LRUCache(values[i][0]);
-            results.push_back("null");
-        } else if (operations[i] == "put") {
-            cache->put(values[i][0], values[i][1]);
-            results.push_back("null");
-        } else if (operations[i] == "get") {
-            results.push_back(to_string(cache->get(values[i][0])));
-        }
-    }
-
-    for (const string& res : results) {
-        cout << res << " ";
-    }
-    cout << endl;
-
-    delete cache; // 释放内存
-    return 0;
+int main(){
+	LRUCache* cache = new LRUCache(2);
+	cache->put(1, 1);
+	cache->put(2, 2);
+	cout << cache->get(1) << " ";
+	cache->put(3, 3);
+	cout << cache->get(2) << " ";
+	cache->put(4, 4);
+	cout << cache->get(1) << " ";
+	cout << cache->get(3) << " ";
+	cout << cache->get(4) << " ";
+	return 0;
 }
 
 /**

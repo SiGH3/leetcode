@@ -32,7 +32,7 @@ public:
                 auto [node,index] = q.front();
                 q.pop();
 
-                index -= leftMost;
+                index -= leftMost;  //将当前层的索引归一化到从 0 开始，防止溢出并减少计算误差。
 
                 if(node->left) q.push({node->left,index*2});
                 if(node->right) q.push({node->right,index*2+1});
@@ -61,7 +61,7 @@ TreeNode* buildTree(const vector<string>& nums){
         index++;
 
         if (nums[index] != "null" && index<nums.size()) {
-            node->right = new TreeNode(stoi(nums[index]));  // 左子节点
+            node->right = new TreeNode(stoi(nums[index]));  // 右子节点
             q.push(node->right);
         }
         index++;
