@@ -1,0 +1,35 @@
+#include <iostream>
+#include <string>
+#include <vector>
+
+using namespace std;
+
+//设 dp[i][j] 表示 str1[0:i] 和 str2[0:j] 的最长公共子串长度：
+
+//如果 str1[i-1] == str2[j-1]，则 dp[i][j] = dp[i-1][j-1] + 1
+
+//如果 str1[i-1] != str2[j-1]，则 dp[i][j] = 0
+
+string longestCommonSubstring(string str1,string str2){
+    int m=str1.size(),n=str2.size();
+    if(m==0||n==0){
+        return "";
+    }
+
+    vector<vector<int>> dp(m+1,vector<int>(n+1));
+    int maxLen = 0,endIndex=0;
+
+    for(int i=1;i<=m;i++){
+        for(int j=1;j<=n;j++){
+            if(str1[i-1]==str2[j-1]){  // 只有字符匹配时，才可能扩展子串
+                dp[i][j]=dp[i-1][j-1]+1;
+                if(dp[i][j]>maxLen){
+                    maxLen = dp[i][j];
+                    endIndex =i-1; // 记录公共子串的结束位置
+                }
+            }
+        }
+    }
+    return str1.substr(endIndex-maxLen+1,maxLen);
+
+}
